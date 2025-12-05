@@ -1,12 +1,6 @@
-# API Monitoring Server
+# command dijalankan langsung dari root
 
-Command dijalankan langsung dari root
-```bash
-cd /var/www
-
-git clone git@github.com:indrakoto/api-monitoring-server.git backend
-
-cd backend
+git clone git@github.com:indrakoto/api-monitoring-server.git
 
 chmod +x /var/www/backend/api-monitoring-server.py
 
@@ -16,7 +10,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable api-monitoring-server
 sudo systemctl start api-monitoring-server
 sudo systemctl status api-monitoring-server
-```
 
 # Cek status
 sudo systemctl status api-monitoring-server
@@ -29,3 +22,4 @@ ps aux | grep api-monitoring-server
 
 # Test API
 curl http://localhost:5005/health
+

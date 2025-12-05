@@ -1,0 +1,17 @@
+[Unit]
+Description=Monitoring Server API
+After=network.target
+
+[Service]
+Type=simple
+User=administrator
+WorkingDirectory=/var/www/backend
+ExecStart=/opt/venv/bin/python /var/www/backend/api-monitoring-server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONPATH=/var/www/backend
+
+[Install]
+WantedBy=multi-user.target
